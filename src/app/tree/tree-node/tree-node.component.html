@@ -1,0 +1,7 @@
+<div>
+    <span (click)="toggle()">{{ node.name }}</span>
+    <div *ngIf="isExpanded" style="margin-left: 20px;">
+      <app-tree-node *ngFor="let child of node.children" [node]="child"></app-tree-node>
+    </div>
+  </div>
+  

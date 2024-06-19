@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TreeModule } from './tree/tree.module'; // Import the TreeModule
+import { HttpClientModule } from '@angular/common/http';
+import { TreeChartComponent } from './tree-chart/tree-chart.component'; // Import HttpClientModule
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TreeChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule, // Import HttpClientModule here as well
+    TreeModule // Import TreeModule here
   ],
   providers: [],
   bootstrap: [AppComponent]
